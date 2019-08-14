@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'styles.dart';
+import 'Dashboard/DashboardStyles.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   Text(
                     "Nouveaux Clients",
-                    style: Styles.boardSectionTitle
+                    style: DashboardStyles.SectionTitle
                   ),
                 ],
               ),
@@ -64,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.green[200],
               child: Column(
                 children: <Widget>[
-                  Text('new client 1', style: Styles.boardSectionContent,),
-                  Text('new client 2', style: Styles.boardSectionContent,),
+                  Text('new client 1', style: DashboardStyles.SectionContent,),
+                  Text('new client 2', style: DashboardStyles.SectionContent,),
                 ],
               ),
             ),
