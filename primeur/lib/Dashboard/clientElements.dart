@@ -14,7 +14,7 @@ class ClientBanner extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          Text(title, style: DashboardStyles.SectionTitle),
+          Text(title, style: DashboardStyles.ClientTitle),
         ],
       ),
     );
