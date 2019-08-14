@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Dashboard/DashboardStyles.dart';
+import 'Dashboard/clientElements.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,31 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           // Clients Header
-          Container(
-            margin: EdgeInsets.all(12),
-            padding: EdgeInsets.all(4.0),
-            child: Column(
-                children: <Widget>[
-                  Text(
-                    "Nouveaux Clients",
-                    style: DashboardStyles.SectionTitle
-                  ),
-                ],
-              ),
-          ),
-          // Clients Data
-          Padding(
-            padding: EdgeInsets.all(24.0),
-            child: Container(
-              color: Colors.green[200],
-              child: Column(
-                children: <Widget>[
-                  Text('new client 1', style: DashboardStyles.SectionContent,),
-                  Text('new client 2', style: DashboardStyles.SectionContent,),
-                ],
-              ),
-            ),
-          ),
+          ClientBanner(title: 'Nouveaux clients'),
+          ClientContent(name: "Client 1", address: "Address Client 1"),
+          ClientContent(name: 'Client ABC', address: '5 rue des moutons 75011 Paris')
         ],
       ),
 
