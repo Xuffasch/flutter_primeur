@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Dashboard/elements-client.dart';
+import 'Dashboard/elements-order.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,10 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          // Clients Header
+          // Clients
           ClientBanner(title: 'Nouveaux clients'),
           ClientContent(name: "Client 1", address: "Address Client 1"),
-          ClientContent(name: 'Client ABC', address: '5 rue des moutons 75011 Paris')
+          ClientContent(name: 'Client ABC', address: '5 rue des moutons 75011 Paris'),
+          // Order
+          OrderBanner(title: 'Dernières commandes'),
+          OrderContent(clientName: 'Client 2', total: 560),
+          OrderContent(clientName: 'Pizza Pesto', total: 1200),
         ],
       ),
 
