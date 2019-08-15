@@ -14,7 +14,7 @@ class ClientBanner extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       child: Column(
         children: <Widget>[
-          Text(title, style: DashboardStyles.ClientTitle),
+          Text(title, style: DashboardTitle.client),
         ],
       ),
     );
@@ -34,20 +34,31 @@ class ClientContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[350],
       margin: EdgeInsets.all(4.0),
       padding: EdgeInsets.all(4.0),
+      decoration: BoxDecoration(
+        color: Colors.teal[100],
+        shape: BoxShape.rectangle,
+        borderRadius: BorderRadius.circular(8.0),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Colors.grey[400],
+            blurRadius: 3.0,
+            offset: new Offset(2.0, 3.0),
+          ),
+        ],
+      ),
       child: Column(
         children: <Widget>[
           SizedBox(height: 4),
           Text(
             name,
-            style: DashboardStyles.SectionContent,
+            style: DashboardSection.mainLabel,
           ),
           SizedBox(height: 4),
           Text(
             address,
-            style: DashboardStyles.SectionContent,
+            style: DashboardSection.value,
           ),
           SizedBox(height: 4),
         ],
