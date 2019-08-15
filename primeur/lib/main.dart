@@ -51,8 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ClientContent(name: 'Client ABC', address: '5 rue des moutons 75011 Paris'),
           // Order
           OrderBanner(title: 'Dernières commandes'),
-          OrderContent(clientName: 'Client 2', total: 560),
-          OrderContent(clientName: 'Pizza Pesto', total: 1200),
+          OrderContent(clientName: 'Client 2', total: 560, 
+                        livraison: DateTime.utc(2019, 09, 17, 7, 00)),
+          OrderContent(clientName: 'Pizza Pesto', total: 1200, 
+                        livraison: DateTime.utc(2019, 09, 20, 14, 00)),
         ],
       ),
 
