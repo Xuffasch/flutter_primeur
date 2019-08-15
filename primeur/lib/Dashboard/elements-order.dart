@@ -36,7 +36,7 @@ class OrderContent extends StatelessWidget {
     this.livraison
   });
 
-  String get livraison_date => DateFormat("yyyy-MM-dd HH:mm").format(livraison);
+  String get livraisonDate => DateFormat("yyyy-MM-dd HH:mm").format(livraison);
 
   @override 
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class OrderContent extends StatelessWidget {
               SizedBox(width: 8.0),
               Text("Livraison : ", style: DashboardSection.label),
               Expanded(
-                child: Text(livraison_date, style: DashboardSection.value),
+                child: Text(livraisonDate, style: DashboardSection.value),
               ),
               Text("Total : ", style: DashboardSection.label),
               Text(total.toString(), style: DashboardSection.value),
