@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dashboardStyles.dart';
+import 'styles-dashboard.dart';
 
 // Display the Client section title
 class ClientBanner extends StatelessWidget {

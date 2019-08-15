@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dashboardStyles.dart';
+import 'styles-dashboard.dart';
 
 class OrderBanner extends StatelessWidget {
   final title;
