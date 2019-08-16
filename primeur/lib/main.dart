@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:primeur/Dashboard/elements-procurement.dart';
 import 'Dashboard/elements-client.dart';
 import 'Dashboard/elements-order.dart';
 
@@ -55,6 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         livraison: DateTime.utc(2019, 09, 17, 7, 00)),
           OrderContent(clientName: 'Pizza Pesto', total: 1200, 
                         livraison: DateTime.utc(2019, 09, 20, 14, 00)),
+          // Procurement
+          ProcurementBanner(title: 'Achats à faire'),
+          ProcurementContent(produce: "Tomate", dueDate: DateTime.utc(2019,09,17), quantity: 5, unit: Units.kg),
+          ProcurementContent(produce: "Poireau", dueDate: DateTime.utc(2019,09,20), quantity: 3, unit: Units.dozen),
+          ProcurementContent(produce: 'Pomme', dueDate: DateTime.utc(2019,09,20), quantity: 4, unit: Units.box)
         ],
       ),
 
