@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primeur/Dashboard/elements-procurement.dart';
-import 'Dashboard/elements-client.dart';
-import 'Dashboard/elements-order.dart';
+import 'routeGenerator.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,60 +11,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Primeur demo'),
+      initialRoute: "/",
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  final String title;
 
-  MyHomePage({Key key, this.title}) : super(key: key);
-  
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu, 
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button pressed');
-          },
-        ),
-        title: Text(widget.title),
-      ),
-      body: ListView(
-        children: <Widget>[
-          // Clients
-          ClientBanner(title: 'Nouveaux clients'),
-          ClientContent(name: "Client 1", address: "Address Client 1"),
-          ClientContent(name: 'Client ABC', address: '5 rue des moutons 75011 Paris'),
-          // Order
-          OrderBanner(title: 'Dernières commandes'),
-          OrderContent(clientName: 'Client 2', total: 560, 
-                        livraison: DateTime.utc(2019, 09, 17, 7, 00)),
-          OrderContent(clientName: 'Pizza Pesto', total: 1200, 
-                        livraison: DateTime.utc(2019, 09, 20, 14, 00)),
-          // Procurement
-          ProcurementBanner(title: 'Achats à faire'),
-          ProcurementContent(produce: "Tomate", dueDate: DateTime.utc(2019,09,17), quantity: 5, unit: Units.kg),
-          ProcurementContent(produce: "Poireau", dueDate: DateTime.utc(2019,09,20), quantity: 3, unit: Units.dozen),
-          ProcurementContent(produce: 'Pomme', dueDate: DateTime.utc(2019,09,20), quantity: 4, unit: Units.box)
-        ],
-      ),
-
-        
-    
-    );
-  }
-}
 
