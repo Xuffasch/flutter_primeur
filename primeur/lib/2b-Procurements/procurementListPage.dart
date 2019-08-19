@@ -16,6 +16,7 @@ class _ProcurementListPageState extends State<ProcurementListPage> {
     return Scaffold(
       drawer: MainDrawer(accountName: "Primeur", sourceScreen: 'Procurement',),
       appBar: AppBar(
+        backgroundColor: Colors.purple,
         title: Text(widget.title),
       ),
       body: Center(
@@ -24,7 +25,7 @@ class _ProcurementListPageState extends State<ProcurementListPage> {
             "Procurement List Page - to be created",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.orange,
+              color: Colors.purple,
               fontSize: 42,
             )
           ),

@@ -16,6 +16,7 @@ class _OrderListPageState extends State<OrderListPage> {
     return Scaffold(
       drawer: MainDrawer(accountName: "Primeur", sourceScreen: "Order",),
       appBar: AppBar(
+        backgroundColor: Colors.orange,
         title: Text(widget.title),
       ),
       body: Center(

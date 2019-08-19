@@ -16,6 +16,7 @@ class _ClientDetailPageState extends State<ClientDetailPage> {
     return Scaffold(
       drawer: MainDrawer(accountName: 'Primeur', sourceScreen: "Client Detail"),
       appBar: AppBar(
+        backgroundColor: Colors.teal[500],
         title: Text(widget.title),
       ),
       body: Center(

@@ -14,8 +14,9 @@ class _ClientListPageState extends State<ClientListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(accountName: 'Primeur', sourceScreen: 'Client',),
+      drawer: MainDrawer(accountName: 'Primeur', sourceScreen: 'Client'),
       appBar: AppBar(
+        backgroundColor: Colors.teal,
         title: Text(widget.title),
       ),
       body: Center(
@@ -24,7 +25,7 @@ class _ClientListPageState extends State<ClientListPage> {
             "Client List Page - to be created",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.orange,
+              color: Colors.teal,
               fontSize: 42,
             )
           ),
