@@ -20,9 +20,9 @@ class MainDrawer extends StatelessWidget {
       case "Dashboard":
         return HomePage(title: "Récapitulatif");
       case "Client":
-        return ClientListPage(title: "Client");
+        return ClientListPage(title: "Clients");
       case "Order":
-        return OrderListPage(title: "Commande");
+        return OrderListPage(title: "Commandes");
       case "Procurement":
         return ProcurementListPage(title: "Achats");
       default:
@@ -34,17 +34,19 @@ class MainDrawer extends StatelessWidget {
     if (from != to) {
       print(to + " screen is called from " + from);
       Navigator.of(context).pop();
-      Navigator.of(context).push(PageRouteBuilder(
-        pageBuilder: (BuildContext context, _, __) {
-          return nextWidget(to);
-        },
-        transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
-          return FadeTransition(
-            opacity: animation,
-            child: child,
-          );
-        }, 
-      ));
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (BuildContext context, _, __) {
+            return nextWidget(to);
+          },
+          transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          }, 
+        )
+      );
     }
   }
 
