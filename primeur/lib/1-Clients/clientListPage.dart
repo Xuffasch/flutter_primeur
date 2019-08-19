@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../mainDrawer.dart';
 
 class ClientListPage extends StatefulWidget {
   final String title;
@@ -13,16 +14,8 @@ class _ClientListPageState extends State<ClientListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MainDrawer(accountName: 'Primeur', sourceScreen: 'Client',),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu,
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button pressed from Client List Page');
-          }
-        ),
         title: Text(widget.title),
       ),
       body: Center(

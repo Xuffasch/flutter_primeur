@@ -4,6 +4,8 @@ import 'elements-client.dart';
 import 'elements-order.dart';
 import 'elements-procurement.dart';
 
+import '../mainDrawer.dart';
+
 class HomePage extends StatefulWidget {
   final String title;
 
@@ -16,18 +18,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      drawer: MainDrawer(accountName: "Primeur", sourceScreen: "Dashboard",),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.menu, 
-            semanticLabel: 'menu',
-          ),
-          onPressed: () {
-            print('Menu button pressed');
-          },
-        ),
         title: Text(widget.title),
       ),
       body: ListView(
