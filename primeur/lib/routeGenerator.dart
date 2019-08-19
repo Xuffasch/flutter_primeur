@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "Dashboard/homePage.dart";
-import "Clients/clientListPage.dart";
-import "Clients/clientDetailPage.dart";
+import "0-Dashboard/homePage.dart";
+import "1-Clients/clientListPage.dart";
+import "1-Clients/clientDetailPage.dart";
 
 class RouteGenerator {
   // App routes
@@ -30,6 +30,6 @@ class RouteGenerator {
         ),
       );
     });
-}
+  }
 }
 
