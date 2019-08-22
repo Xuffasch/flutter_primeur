@@ -1,7 +1,7 @@
 class Client {
   final int id;
   final String business;
-  final String addressNumber;
+  final int addressNumber;
   final String address;
   final int postcode;
   final String city;
