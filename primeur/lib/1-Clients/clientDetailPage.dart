@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import '../mainDrawer.dart';
+
+import '../1-Clients/client.dart';
 
 class ClientDetailPage extends StatefulWidget {
-  final String title;
+  final Client client;
 
-  ClientDetailPage({Key key, this.title}) : super(key: key);
+  ClientDetailPage({Key key, this.client}) : super(key: key);
   
   @override
   _ClientDetailPageState createState() => _ClientDetailPageState();
@@ -14,10 +15,9 @@ class _ClientDetailPageState extends State<ClientDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(accountName: 'Primeur', sourceScreen: "Client Detail"),
       appBar: AppBar(
         backgroundColor: Colors.teal[500],
-        title: Text(widget.title),
+        title: Text(widget.client.business),
       ),
       body: Center(
         child: Container(

@@ -8,7 +8,7 @@ import '../server_url.dart';
 import 'client.dart';
 
 import '../mainDrawer.dart';
-import '../0-Dashboard/elements-client.dart';
+import '../0-Dashboard/elements-client_gestures.dart';
 
 Future<List<Client>> fetchClients() async {
   var server = server_url + "/clients/all";
@@ -42,9 +42,9 @@ class _ClientListPageState extends State<ClientListPage> {
                 future: fetchClients(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    List<ClientContent> clients = snapshot.data
+                    List<ClientContentGesture> clients = snapshot.data
                       .map((c) =>
-                          ClientContent(name: c.business, address: c.address))
+                          ClientContentGesture(client: c))
                       .toList();
                   return ListView(
                     children: clients,
