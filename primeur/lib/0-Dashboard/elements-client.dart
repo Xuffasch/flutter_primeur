@@ -1,26 +1,6 @@
 import 'package:flutter/material.dart';
 import 'styles-dashboard.dart';
 
-// Display the Client section title
-class ClientBanner extends StatelessWidget {
-  final title;
-
-  const ClientBanner({this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(8.0),
-      padding: EdgeInsets.all(8.0),
-      child: Column(
-        children: <Widget>[
-          Text(title, style: DashboardTitle.client),
-        ],
-      ),
-    );
-  }
-}
-
 // Displau the Client section content
 class ClientContent extends StatelessWidget {
   final name;
