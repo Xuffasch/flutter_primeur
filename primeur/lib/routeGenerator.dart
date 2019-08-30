@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "0-Dashboard/homePage.dart";
 import "1-Clients/clientListPage.dart";
-import "messagesListPage.dart";
+import "3-Messages/messagesListPage.dart";
 
 class RouteGenerator {
   // App routes

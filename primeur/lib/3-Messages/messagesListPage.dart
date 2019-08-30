@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import "package:graphql_flutter/graphql_flutter.dart";
-import 'package:primeur/BonjourQuery.dart';
+import 'BonjourQuery.dart';
 import "Bonjour.dart";
-import "graphqlConf.dart";
+import "../graphqlConf.dart";
 
 class MessagesListPage extends StatefulWidget {
   @override
@@ -21,8 +21,6 @@ class _MessagesListPage extends State<MessagesListPage> {
         document: bonjourQuery.messages(),
       ),
     );
-
-    print("GraphQl result : " + result.data.keys.toString());
     
     if (!result.hasErrors) {
       for (var i = 0; i < result.data["messages"].length; i++) {

@@ -11,7 +11,7 @@ import '../mainDrawer.dart';
 import '../0-Dashboard/elements-client_gestures.dart';
 
 Future<List<Client>> fetchClients() async {
-  var server = server_url + "/clients/all";
+  var server = express_url + "/clients/all";
   final response = await http.get(server);
 
   return (json.decode(response.body)["result"] as List)

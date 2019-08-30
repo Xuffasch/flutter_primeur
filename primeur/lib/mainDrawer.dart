@@ -3,7 +3,7 @@ import "0-Dashboard/homePage.dart";
 import "1-Clients/clientListPage.dart";
 import "2a-Orders/orderListPage.dart";
 import "2b-Procurements/procurementListPage.dart";
-import "messagesListPage.dart";
+import "3-Messages/messagesListPage.dart";
 
 class MainDrawer extends StatelessWidget {
   final accountName;
