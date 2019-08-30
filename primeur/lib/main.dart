@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 import 'routeGenerator.dart';
 
-void main() => runApp(MyApp());
+import 'package:graphql_flutter/graphql_flutter.dart';
+import "graphqlConf.dart";
+
+GraphQLConfiguration graphQLConfiguration = GraphQLConfiguration();
+
+void main() => runApp(
+  GraphQLProvider(
+    client: graphQLConfiguration.client,
+    child: CacheProvider(child: MyApp()),
+  ),  
+);
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -11,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: "/",
+      initialRoute: "/messages",
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

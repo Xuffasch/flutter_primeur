@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "0-Dashboard/homePage.dart";
 import "1-Clients/clientListPage.dart";
+import "messagesListPage.dart";
 
 class RouteGenerator {
   // App routes
@@ -10,6 +11,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HomePage(title: "Primeur Demo"));
       case '/client':
         return MaterialPageRoute(builder: (_) => ClientListPage(title: "Client List Page Title"));
+      case '/messages':
+        return MaterialPageRoute(builder: (_) => MessagesListPage());
       default:
         return _errorRoute();
     }

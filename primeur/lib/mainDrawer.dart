@@ -3,6 +3,7 @@ import "0-Dashboard/homePage.dart";
 import "1-Clients/clientListPage.dart";
 import "2a-Orders/orderListPage.dart";
 import "2b-Procurements/procurementListPage.dart";
+import "messagesListPage.dart";
 
 class MainDrawer extends StatelessWidget {
   final accountName;
@@ -25,6 +26,8 @@ class MainDrawer extends StatelessWidget {
         return OrderListPage(title: "Commandes");
       case "Procurement":
         return ProcurementListPage(title: "Achats");
+      case "Messages":
+        return MessagesListPage();
       default:
         return HomePage(title: "Récapitulatif");
     }
@@ -92,6 +95,13 @@ class MainDrawer extends StatelessWidget {
             leading: Text("Achats"),
             onTap: () {
               transition(context, sourceScreen, "Procurement");
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Text("Messages"),
+            onTap: () {
+              transition(context, sourceScreen, "Messages");
             },
           ),
         ],
