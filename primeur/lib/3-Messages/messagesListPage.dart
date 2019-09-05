@@ -47,7 +47,14 @@ class _MessagesListPage extends State<MessagesListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello from the World")
+        title: Text("Hello from the World"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.add_circle_outline),
+            onPressed: () => Navigator.of(context).pushNamed("/updateMessages"),
+            tooltip: "Create a new Hello Message",
+          ),
+        ],
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
