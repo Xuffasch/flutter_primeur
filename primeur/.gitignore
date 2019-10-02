@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+.vscode/
 
 # IntelliJ related
 *.iml
@@ -73,3 +74,4 @@
 
 # Changing localtunnel server link url
 server_url.dart
+flutter_export_environment.sh
