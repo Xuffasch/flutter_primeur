@@ -4,8 +4,6 @@ import 'BonjourQuery.dart';
 import "Bonjour.dart";
 import "../graphqlConf.dart";
 
-import "../mainDrawer.dart";
-
 class BonjourUpdatePage extends StatefulWidget {
   final Bonjour bonjour;
   final bool isAdd;
@@ -79,6 +77,7 @@ class _BonjourUpdatePage extends State<BonjourUpdatePage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 40.0, horizontal: 12),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     FlatButton(
                       child: Text("Cancel"),
